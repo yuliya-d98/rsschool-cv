@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- https://wiki.pwodev.com/highlight-js-%D0%BB%D1%83%D1%87%D1%88%D0%B0%D1%8F-%D0%BF%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%B0-%D0%BA%D0%BE%D0%B4%D0%B0/ -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>HTML, CSS & Git Basics</title>
+</head>
+<body>
+    <div class="content-position">
+        <header>
+            <div class="header__burger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="flex-pos">
+                    <li class="link-like-button"><a href="#about-me">About Me</a></li>
+                    <li class="link-like-button"><a href="#english-level">English Level</a></li>
+                    <li class="link-like-button"><a href="#code-examples">Code Examples</a></li>
+                    <li class="link-like-button"><a href="#skills">Skills</a></li>
+                    <li class="link-like-button"><a href="#education">Education</a></li>
+                    <li class="link-like-button"><a href="#work-experience">Work Experience</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="head">
+                <img class="my-photo" src="selfie.jpg" alt="my photo" width="200" height="200">
+                <h1>Yuliya Dubovik</h1>
+                <nav>
+                    <ul>
+                        <li class="link-like-button head-button">
+                            <a target="_blank" href="mailto:feelgloom@gmail.com">Write me</a>
+                        </li>
+                        <li class="link-like-button head-button">
+                            <a target="_blank" href="https://github.com/yuliya-d98">My GitHub</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+    
+            <div class="placing">
+
+                <div class="placing__column">
+                    <section id="about-me" class="sections">
+                        <h2>About Me</h2>
+                        <p>I'm purposeful and easely trained. Half of year ago I found new hobby that takes all of my time right now. It is learning programming.</p>
+                    </section>
+
+                    <section id="english-level" class="sections">
+                        <h2>English Level</h2>
+                        <p>B1</p>
+                    </section>
+
+                    <section id="code-examples" class="sections">
+                        <h2>Code Examples</h2>
+    
+                        <p>My latest projects:</p>
+                        <ul class="code-examlpes">
+                            <li>
+                                <a target="_blank" href="https://rolling-scopes-school.github.io/yuliya-d98-JSFEPRESCHOOL/museum/">
+                                    <p class="project-name">Museum</p>
+                                    <p>My first site layout :) It was made using HTML, CSS, PerfectPixel and JS a little bit.</p>
+                                    <img class="code-examples__img" src="example1.png" alt="example1">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://rolling-scopes-school.github.io/yuliya-d98-JSFEPRESCHOOL/vertical-slider/">
+                                    <p class="project-name">Vertical Slider</p>
+                                    <p>I was learning to use JS, DOM API and DOM Events.</p>
+                                    <img class="code-examples__img" src="example2.png" alt="example2">
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://rolling-scopes-school.github.io/yuliya-d98-JSFEPRESCHOOL/custom-video-player/">
+                                    <p class="project-name">Custom Video Player</p>
+                                    <p>I made my own custom video player using JS.</p>
+                                    <img class="code-examples__img" src="example3.png" alt="example3">
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <pre>
+                            <code class="js">
+    function rgb(r, g, b){
+    
+        if (r &lt; 0) {r = 0};
+        if (r > 255) {r = 255};
+        if (g &lt; 0) {g = 0};
+        if (g > 255) {g = 255};  
+        if (b &lt; 0) {b = 0};
+        if (b > 255) {b = 255};
+        
+        let result = [];
+        let Hexadecimal = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+        
+        result.push(Hexadecimal[Math.floor(r/16)]);
+        result.push(Hexadecimal[r - (16 * Math.floor(r/16))]);
+        result.push(Hexadecimal[Math.floor(g/16)]);
+        result.push(Hexadecimal[g - (16 * Math.floor(g/16))]);
+        result.push(Hexadecimal[Math.floor(b/16)]);
+        result.push(Hexadecimal[b - (16 * Math.floor(b/16))]);
+        
+        return result.join('');
+    }
+                            </code>
+                        </pre>
+                        <p>More code examples at <a class="link" href="https://www.codewars.com/users/yuliya-d98" target="_blank" rel="noopener noreferrer">my codewars</a>.</p>
+                    </section>
+
+                </div>
+
+
+                <div class="placing__column">
+                    <section id="skills" class="sections">
+                        <h2>Skills</h2>
+                        <p>I'm learning Javascript, CSS and HTML.</p>
+                        <ul>
+                            <li>
+                                <div>HTML</div>
+                                <div class="whole-level">
+                                    <div class="html-level">90%</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>Javascript</div>
+                                <div class="whole-level">
+                                    <div class="js-level">40%</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>CSS</div>
+                                <div class="whole-level">
+                                    <div class="css-level">50%</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="education" class="sections">
+                        <h2>Education</h2>
+                        <p>I've got a higher aducation at <a target="_blank" href="https://bntu.by/" class="link">BNTU</a> in energy faculty specializing in power supply.</p>
+                        <p>Completed the "HTML Academy" website layout course.</p>
+                        <p>And now i'm studying at <a href="https://rs.school/index.html" target="_blank" class="link">RS School</a>.</p>
+                    </section>
+            
+                    <section id="work-experience" class="sections">
+                        <h2>Work Experience</h2>
+                        <p>Nowadays I'm working on another field of activity.</p>
+                    </section>
+                </div>
+
+            </div>
+    
+        </main>
+        <footer>
+            <ul class="flex-pos__footer">
+                <li class="link-like-button">
+                    <a target="_blank" href="https://github.com/yuliya-d98">My GitHub</a>
+                </li>
+                <li class="link-like-button">2021</li>
+                <li class="link-like-button">
+                    <a target="_blank" href="https://rs.school/js/">
+                        <img src="https://rs.school/images/rs_school_js.svg" alt="logo" width="50" height="30">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
